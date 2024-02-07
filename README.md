@@ -33,9 +33,10 @@ Inside the CSS folder, I created a file call main.css.
 i configured things in settings.py and then add this link os.path.join(BASE_DIR, 'static') to our template.
 ##            DATA STRUCTURE and Algorithm
 ###           Part 1 | Models
-##Database Models
-###models
+## Database Models
+### models
 #[PICTURE HERE]
+
 User- Built in Dango user model. An instance of this model will be created for each customer that registers with our website. This model will give us the ability to later use Djangos default authentication system without having to manually set this up ourselves.
 Customer - Along with a User model each customer will contain a Customer model that holds a one to one relationship to each user. (OneToOneField).
 Product - The product model represents products we have in store.
@@ -44,7 +45,7 @@ OrderItem- An order Item is one item with an order. So for example a shopping ca
 
 ShippingAddress- Not every order will need shipping information. For orders containing physical products that need to be shipping we will need to create an instance of the shipping model to know where to send the order. Shipping will simply be a child of the order model when necessary.
 
-##Part 2 | Render Products
+###             Part 2 | Render Products
 1. Query Products- In our apps views.py file, I first imported all our models and then query the products within our store view. I added "products" into the context dictionary.
 2. Render Products - Loop Through Products, Replace Fields for Product Price and Product Name
 2. Product Image Field
